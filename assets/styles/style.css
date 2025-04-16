@@ -1,0 +1,826 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+:root {
+    --main-green: #08a957;
+    --main-orange: #ff7b0d;
+    --main-red: #ED1D26;
+    --main-blue: #0069AA;
+    --main-gray: #212121;
+    --light-gray: #bfbfbf;
+}
+
+h2,
+h3,
+h4,
+h5 {
+    font-family: "Roboto", serif;
+    color: #212121;
+}
+
+p {
+    font-family: "Open Sans", sans-serif;
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: #2d2d2d;
+    line-height: 30px;
+}
+
+ul,
+li {
+    font-family: "Open Sans", sans-serif;
+}
+
+h2 {
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+h4 {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+strong {
+    font-weight: bold;
+}
+
+strong.red {
+    color: var(--main-red);
+}
+
+strong.green {
+    color: var(--main-green);
+}
+
+strong.orange {
+    color: var(--main-orange);
+}
+
+strong.blue {
+    color: var(--main-blue);
+}
+
+.on-mobile {
+    display: none;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-uppercase {
+    text-transform: uppercase;
+}
+
+.container {
+    max-width: 70%;
+    margin: 0 auto;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.row.flex-reverse {
+    flex-direction: row-reverse;
+}
+
+.col-4 {
+    width: 40%;
+}
+
+.col-8 {
+    width: 50%;
+    max-width: 50%;
+}
+
+.col-6 {
+    width: 49.9%;
+    max-width: 49.9%;
+}
+
+/* HOME BANNERS */
+.home-first-banner {
+    margin-bottom: 50px;
+    position: relative;
+}
+
+.home-first-banner .text.first {
+    position: absolute;
+    max-width: 40%;
+    top: 55%;
+    left: 33%;
+    transform: translate(-50%, -50%);
+}
+
+.home-first-banner .text.first h2 {
+    text-transform: uppercase;
+    font-size: 60px;
+    font-weight: bold;
+}
+
+.home-first-banner .text.first h2 span {
+    display: block;
+    font-size: 110px;
+    color: var(--main-red);
+    font-style: italic;
+}
+
+.home-first-banner .text.first div.left-line {
+    max-width: 65%;
+    min-height: 170px;
+    border-left: 1px solid var(--main-red);
+    padding-left: 10px;
+}
+
+.home-first-banner .text.first p {
+    font-size: 30px;
+    margin-top: 20px;
+    font-weight: 500;
+}
+
+.home-first-banner .text.first p strong {
+    font-weight: 900;
+}
+
+.home-second-banner {
+    position: relative;
+}
+
+.home-second-banner .text.first {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.home-second-banner .text.first h2 {
+    color: #fff;
+    font-size: 45px;
+    font-style: italic;
+}
+
+.home-second-banner .text.first h2 span {
+    display: block;
+    font-size: 80px;
+}
+
+.home-second-banner .text.first p {
+    color: #fff;
+    font-size: 40px;
+    font-style: italic;
+}
+
+/* programs */
+.programs {
+    margin: 100px 0px;
+}
+
+.programs .programs-description {
+    text-align: center;
+}
+
+.programs .programs-description h2 {
+    font-size: 50px;
+}
+
+.programs .programs-description p {
+    margin: 10px auto;
+    line-height: 1.3;
+    max-width: 65%;
+}
+
+.programs .programs-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin-top: 50px;
+    min-height: 400px;
+}
+
+.programs .programs-container .program-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+    min-height: 230px;
+    position: relative;
+    transition: 0.3s ease;
+}
+
+.programs .programs-container .program-item:hover {
+    min-height: 250px;
+}
+
+.programs .programs-container .program-item.slim {
+    background: var(--main-red);
+}
+
+.programs .programs-container .program-item.detox {
+    background: var(--main-green);
+}
+
+.programs .programs-container .program-item.power {
+    background: var(--main-blue);
+}
+
+.programs .programs-container .program-item.active {
+    background: var(--main-orange);
+}
+
+.programs .programs-container .program-item h3 {
+    color: #fff;
+    font-size: 25px;
+    font-weight: 500;
+}
+
+.programs .programs-container .program-item p {
+    color: #fff;
+    font-size: 14px;
+    line-height: 1.2;
+    margin: 10px 0px;
+}
+
+.programs .programs-container .program-item .program-icons {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 60%;
+    gap: 10px;
+}
+
+.programs .programs-container .program-item .program-item-image {
+    position: absolute;
+    max-width: 60%;
+    right: 0;
+    bottom: -40%;
+}
+
+/* Text under programs section */
+.under-programs-text {
+    margin: 100px 0px;
+}
+
+.under-programs-text h2 {
+    font-size: 50px;
+}
+
+.under-programs-text h3 {
+    font-size: 30px;
+    margin-top: 20px;
+    padding-left: 5px;
+}
+
+.under-programs-text p {
+    margin-top: 30px;
+    color: rgb(83, 83, 83);
+}
+
+.under-programs-text .left-line {
+    border-left: 1px solid var(--main-red);
+    padding-bottom: 50px;
+    padding-left: 10px;
+}
+
+.under-programs-text .under-icons {
+    max-width: 40%;
+    margin-top: 40px;
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(5, 1fr);
+}
+
+/* tea program */
+.tea-program {
+    position: relative;
+    margin-top: 100px;
+}
+
+.tea-program .tea-program-background {
+    position: absolute;
+    height: 73%;
+    width: 100%;
+    z-index: -1;
+    background: #F2F2F2;
+    left: 50%;
+    bottom: 10px;
+    transform: translate(-50%, 0%);
+}
+
+.tea-program .tea-program-container .tea-program-col h2 {
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 40px;
+    margin-bottom: 30px;
+    padding-top: 10px;
+}
+
+.tea-program .tea-program-container .tea-program-col h2 span {
+    display: block;
+    font-size: 55px;
+}
+
+.tea-program.slim .tea-program-container .tea-program-col h2 span {
+    color: var(--main-red);
+}
+
+.tea-program.detox .tea-program-container .tea-program-col h2 span {
+    color: var(--main-green);
+}
+
+.tea-program.active .tea-program-container .tea-program-col h2 span {
+    color: var(--main-orange);
+}
+
+.tea-program.power .tea-program-container .tea-program-col h2 span {
+    color: var(--main-blue);
+}
+
+.tea-program .tea-program-container .tea-program-col .tea-program-icons {
+    display: flex;
+    gap: 20px;
+}
+
+.tea-program .tea-program-container .tea-program-col .tea-program-icons img {
+    width: 65px;
+}
+
+.tea-program .tea-program-container .tea-program-col .left-line {
+    padding-left: 10px;
+    padding-bottom: 20px;
+}
+
+.tea-program.slim .tea-program-container .tea-program-col .left-line {
+    border-left: 2px solid var(--main-red);
+}
+
+.tea-program.detox .tea-program-container .tea-program-col .left-line {
+    border-left: 2px solid var(--main-green);
+}
+
+.tea-program.active .tea-program-container .tea-program-col .left-line {
+    border-left: 2px solid var(--main-orange);
+}
+
+.tea-program.power .tea-program-container .tea-program-col .left-line {
+    border-left: 2px solid var(--main-blue);
+}
+
+.tea-program .tea-program-container .tea-program-col .left-line h2 {
+    margin-top: 30px;
+    margin-bottom: 0px;
+}
+
+.tea-program .tea-program-container .tea-program-col .left-line h3 {
+    margin-top: 15px;
+    font-size: 30px;
+    line-height: 1.2;
+}
+
+.tea-program .tea-program-container .tea-program-col .tea-program-bullets {
+    font-size: 20px;
+    margin-top: 30px;
+}
+
+.tea-program .tea-program-container .tea-program-col .tea-program-bullets .bullet-item {
+    margin-bottom: 10px;
+}
+
+.tea-program .tea-program-container .tea-program-col .tea-program-bullets .bullet-item::before {
+    content: '•';
+    color: var(--main-red);
+    padding-right: 10px;
+    font-size: 25px;
+}
+
+.tea-program.slim .tea-program-container .tea-program-col .tea-program-bullets .bullet-item::before {
+    color: var(--main-red);
+}
+
+.tea-program.detox .tea-program-container .tea-program-col .tea-program-bullets .bullet-item::before {
+    color: var(--main-green);
+}
+
+.tea-program.active .tea-program-container .tea-program-col .tea-program-bullets .bullet-item::before {
+    color: var(--main-orange);
+}
+
+.tea-program.power .tea-program-container .tea-program-col .tea-program-bullets .bullet-item::before {
+    color: var(--main-blue);
+}
+
+.tea-program .tea-program-container .tea-program-col p.thin-text {
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 15px;
+    margin-top: 40px;
+    margin-bottom: 15px;
+}
+
+.tea-program .tea-program-container .tea-program-col .tea-program-pp-image {
+    max-width: 90%;
+    margin-left: 50px;
+    animation: imageAnimationRight 3s ease-in-out infinite;
+}
+
+.tea-program .tea-program-container .row.flex-reverse .tea-program-col .tea-program-pp-image {
+    margin-left: -100px;
+    animation: imageAnimationLeft 3s ease-in-out infinite;
+}
+
+.tea-program .tea-program-container .tea-program-col .learn-more {
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    font-size: 25px;
+    color: #fff;
+    background-color: #F0C44F;
+    text-align: center;
+    top: 10px;
+    padding: 6px 100px;
+    text-decoration: none;
+    transition: 0.2s ease;
+    position: relative;
+}
+
+.tea-program .tea-program-container .tea-program-col .learn-more::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: var(--main-red);
+    width: 0%;
+    height: 100%;
+    z-index: 1;
+    transition: width 0.5s ease;
+}
+
+.tea-program.slim .tea-program-container .tea-program-col .learn-more::before {
+    background: var(--main-red);
+}
+
+.tea-program.detox .tea-program-container .tea-program-col .learn-more::before {
+    background: var(--main-green);
+}
+
+.tea-program.active .tea-program-container .tea-program-col .learn-more::before {
+    background: var(--main-orange);
+}
+
+.tea-program.power .tea-program-container .tea-program-col .learn-more::before {
+    background: var(--main-blue);
+}
+
+.tea-program .tea-program-container .tea-program-col .learn-more span {
+    position: relative;
+    z-index: 2;
+}
+
+.tea-program .tea-program-container .tea-program-col .learn-more:hover::before {
+    width: 100%;
+}
+
+.tea-program.thermos-program {
+    margin-top: 200px;
+}
+
+.tea-program.thermos-program .tea-program-container .tea-program-col {
+    margin-top: 80px;
+}
+
+.tea-program.thermos-program .tea-program-container {
+    max-width: 55%;
+}
+
+.tea-program.thermos-program .tea-program-background {
+    height: 100%;
+}
+
+.cta-banner .cta-text {
+    text-align: center;
+}
+
+.cta-banner .cta-text h2 {
+    font-size: 65px;
+    color: #000;
+    margin-bottom: -9px;
+}
+
+.cta-banner .cta-text h3 {
+    font-size: 35px;
+    font-weight: 700;
+    color: #fff;
+    width: 100%;
+    background: var(--main-blue);
+    padding: 30px 0px 40px 0px;
+}
+
+.cta-banner .cta-text .start-now {
+    font-size: 30px;
+    text-transform: uppercase;
+    font-family: "OpenSans", sans-serif;
+    font-weight: 700;
+    color: #fff;
+    background: var(--main-red);
+    padding: 10px 70px;
+    position: relative;
+    z-index: 1;
+}
+
+.cta-banner img {
+    position: relative;
+    z-index: 0;
+    margin-top: -30px;
+}
+
+@keyframes imageAnimationRight {
+    0% {
+        transform: rotate(-45deg);
+    }
+
+    50% {
+        transform: rotate(-47deg);
+    }
+
+    100% {
+        transform: rotate(-45deg);
+    }
+}
+
+@keyframes imageAnimationLeft {
+    0% {
+        transform: rotate(45deg);
+    }
+
+    50% {
+        transform: rotate(47deg);
+    }
+
+    100% {
+        transform: rotate(45deg);
+    }
+}
+
+@media screen and (max-width: 1420px) {
+    .programs .programs-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 50px;
+        row-gap: 89px;
+        margin-top: 50px;
+        min-height: 400px;
+    }
+
+    .programs .programs-container .program-item .program-item-image {
+        position: absolute;
+        max-width: 43%;
+        right: 0;
+        bottom: -20%;
+    }
+
+    .programs .programs-container .program-item .program-icons {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        max-width: 40%;
+        gap: 10px;
+    }
+
+    .under-programs-text .under-icons {
+        max-width: 50%;
+    }
+
+    .tea-program .tea-program-container .tea-program-col h2 {
+        font-size: 35px;
+    }
+
+    .tea-program .tea-program-container .tea-program-col h2 span {
+        font-size: 45px;
+    }
+
+    .tea-program .tea-program-container .tea-program-col .left-line h3 {
+        font-size: 25px;
+    }
+
+    .tea-program .tea-program-container .tea-program-col .tea-program-bullets {
+        margin-top: 15px;
+    }
+
+    .tea-program .tea-program-background {
+        height: 75%;
+    }
+}
+
+@media screen and (max-width: 1150px) {
+    .container {
+        max-width: 80%;
+    }
+
+    .tea-program .tea-program-container .row.flex-reverse .tea-program-col .tea-program-pp-image {
+        margin-left: -50px;
+    }
+
+    .tea-program .tea-program-container .tea-program-col .learn-more {
+        padding: 5px 65px;
+    }
+
+    .tea-program.thermos-program .tea-program-container {
+        max-width: 50%;
+    }
+
+    .tea-program .tea-program-container .tea-program-col .tea-program-pp-image {
+        max-width: 100%;
+        margin-left: 50px;
+        animation: none;
+    }
+
+    .tea-program .tea-program-container .row.flex-reverse .tea-program-col .tea-program-pp-image {
+        max-width: 100%;
+        margin-left: -100px;
+        animation: none;
+    }
+}
+
+@media screen and (max-width: 795px) {
+    .on-desktop {
+        display: none !important;
+    }
+
+    .on-mobile {
+        display: block !important;
+    }
+
+    p {
+        font-size: 1rem;
+        line-height: 22px;
+    }
+
+    .container {
+        max-width: 90%;
+    }
+
+    .col-sm-12 {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .programs {
+        margin: 30px 0px;
+    }
+
+    .programs .programs-description h2 {
+        font-size: 35px;
+    }
+
+    .programs .programs-description p {
+        max-width: 100%;
+    }
+
+    .programs .programs-container {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .programs .programs-container .program-item .program-item-image {
+        max-width: 40%;
+        bottom: -10%;
+    }
+
+    .programs .programs-container .program-item .program-icons {
+        max-width: 55%;
+    }
+
+    .under-programs-text h2 {
+        font-size: 35px;
+    }
+
+    .under-programs-text h3 {
+        font-size: 25px;
+    }
+
+    .under-programs-text .left-line {
+        padding-bottom: 0px;
+    }
+
+    .under-programs-text .under-icons {
+        max-width: 100%;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .tea-program .tea-program-container .tea-program-col h2 {
+        font-size: 30px;
+        padding-top: 0px;
+    }
+
+    .tea-program .tea-program-container .tea-program-col h2 span {
+        font-size: 30px;
+    }
+
+    .tea-program .tea-program-container .tea-program-col .left-line h3 {
+        font-size: 20px;
+        font-weight: 500;
+    }
+
+    .tea-program .tea-program-container .tea-program-col .left-line {
+        padding-bottom: 0px;
+    }
+
+    .tea-program .tea-program-container .tea-program-col .tea-program-bullets {
+        font-size: 15px;
+    }
+
+    .tea-program .tea-program-container .tea-program-col .tea-program-bullets .bullet-item::before {
+        font-size: 15px;
+    }
+
+    .tea-program .tea-program-container .tea-program-col .tea-program-pp-image {
+        max-width: 80%;
+        margin-left: 0px;
+        animation: none;
+    }
+
+    .tea-program .tea-program-container .row.flex-reverse .tea-program-col .tea-program-pp-image {
+        max-width: 80%;
+        margin-left: 0px;
+        animation: none;
+    }
+
+    .tea-program .tea-program-container .tea-program-col p.thin-text {
+        text-align: center;
+    }
+
+    .tea-program .tea-program-container .tea-program-images-mob {
+        display: flex !important;
+        align-items: center;
+        margin-top: 30px;
+    }
+
+    .tea-program .tea-program-background {
+        height: 90%;
+    }
+
+    .tea-program .tea-program-container .tea-program-col .learn-more {
+        display: block;
+        font-size: 20px;
+        padding: 5px 50px;
+        width: fit-content;
+        margin: 0px auto;
+    }
+
+    .tea-program.thermos-program .tea-program-container {
+        max-width: 100%;
+    }
+
+    .tea-program.thermos-program .tea-program-container .tea-program-col div,
+    .tea-program.thermos-program .tea-program-container .tea-program-col ul {
+        margin: 20px;
+    }
+
+    .tea-program.thermos-program .tea-program-container .tea-program-col {
+        margin-top: 0px;
+    }
+
+    .cta-banner .cta-text {
+        text-align: center;
+    }
+
+    .cta-banner .cta-text h2 {
+        font-size: 30px;
+        color: #000;
+        margin-bottom: 15px;
+    }
+
+    .cta-banner .cta-text h3 {
+        font-size: 30px;
+        font-weight: 700;
+        color: #fff;
+        width: 100%;
+        background: var(--main-blue);
+        padding: 10px 0px 40px 0px;
+    }
+
+    .cta-banner .cta-text .start-now {
+        font-size: 25px;
+        text-transform: uppercase;
+        font-family: "OpenSans", sans-serif;
+        font-weight: 700;
+        color: #fff;
+        background: var(--main-red);
+        padding: 10px 20px;
+        position: relative;
+        z-index: 1;
+    }
+
+    .cta-banner img {
+        position: relative;
+        z-index: 0;
+        margin-top: -30px;
+    }
+}
